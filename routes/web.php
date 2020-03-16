@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('cds');
-});
+Route::get('/', 'ViewController@index');
+
+
+// {
+//     return view('cds');
+// }
