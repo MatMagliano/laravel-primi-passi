@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- @include('partials._header') -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <title>Php Dischi</title>
-</head>
+@extends('layouts.app')
 
-<body>
-
-
-
-    <div class="container">
+    @section('header')
         <header>
             <img src="http://pluspng.com/img-png/spotify-logo-png-open-2000.png" alt="">
         </header>
-
-        <div class="cds-container">
-            @foreach($data as $cd)
-            <div class="cd">
-                <img src="{{$cd['poster']}}" alt="img">
-                <h3>{{$cd['title']}}</h3>
-                <small>{{$cd['author']}}</small>
-                <strong>{{$cd['year']}}</strong>
-            </div>
-            @endforeach
+    @endsection
+    @section('content')
+       <div class="cds-container">
+        @foreach($data as $cd)
+        <div class="cd">
+            <img src="{{$cd['poster']}}" alt="img">
+            <h3>{{$cd['title']}}</h3>
+            <small>{{$cd['author']}}</small>
+            <strong>{{$cd['year']}}</strong>
         </div>
-    </div>
-</body>
+        @endforeach
+    </div>>
+    @endsection
 
-</html>
+@include('partials._footer')
