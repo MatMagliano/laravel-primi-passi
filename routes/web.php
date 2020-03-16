@@ -11,9 +11,4 @@
 |
 */
 
-Route::get('/', 'ViewController@index');
-
-
-// {
-//     return view('cds');
-// }
+Route::get('/', 'HomeController@index');
